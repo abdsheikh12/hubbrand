@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 9999;
+  overflow-y: auto;
+  transition: left 0.4s ease;
+}
+
+.main.show {
+  left: 0;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.cros {
+  text-align: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #dee2e6;
+  cursor: pointer;
+}
+
+.content:hover {
+  background-color: #e9ecef;
+}
+
+.conte {
+  padding: 10px 0;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  text-align: left;
+}
+
+.category {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+  font-size: 11px;
+}
+
+.category:hover {
+  border-bottom: 1px solid black;
+}
+
+#view {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  font-family: poppins;
+  text-align: center;
+  /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  /* Center text horizontally */
+  align-items: center;
+  /* Center text vertically */
+  color: wheat;
+  z-index: 999;
+
+}
+
+.view3 {
+  letter-spacing: 2;
+}
+
+#view::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.507);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  transition: all 1s linear;
+  z-index: -1;
+  /* Ensure it is behind the text */
+}
+
+#view:hover::before {
+  background-color: rgba(0, 0, 0, 0.507);
+  width: 100%;
+}
+
+#bags {
+  position: relative;
+  transition: all 3s linear;
+}
+
+#bags:hover {
+  scale: 1.2;
+}
+
+/* Carousel Controls (optional styling) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  /* visible on light background */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+
+}
+
+/* Product image containers (general class to reduce repetition) */
+.product-bg-img {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 1s all;
+}
+
+
+/* Specific images with hover */
+.product-bg-img1 {
+  background-image: url(w1.webp);
+}
+
+.product-bg-img1:hover {
+  background-image: url(w1%20open.webp);
+}
+
+.product-bg-img2 {
+  background-image: url(w2.webp);
+}
+
+.product-bg-img2:hover {
+  background-image: url(w2%20open.webp);
+}
+
+.product-bg-img3 {
+  background-image: url(w3.webp);
+}
+
+.product-bg-img3:hover {
+  background-image: url(w3%20open.webp);
+}
+
+.product-bg-img4 {
+  background-image: url(w4.webp);
+}
+
+.product-bg-img4:hover {
+  background-image: url(w4%20open.webp);
+}
+
+.product-bg-img5 {
+  background-image: url(w5.webp);
+}
+
+.product-bg-img5:hover {
+  background-image: url(w5\ open.webp);
+}
+
+.product-bg-img6 {
+  background-image: url(w6.webp);
+}
+
+.product-bg-img6:hover {
+  background-image: url(w6\ open.jpg);
+}
+
+.product-bg-img7 {
+  background-image: url(w7.webp);
+}
+
+.product-bg-img7:hover {
+  background-image: url(w7\ open.webp);
+}
+
+.product-bg-img8 {
+  background-image: url(w8.webp);
+}
+
+.product-bg-img8:hover {
+  background-image: url(w8\ open.webp);
+}
+
+.col-btn {
+  padding: 10px 30px;
+  background-color: rgb(189, 189, 3);
+  color: black;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.col-btn::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  transition: width 2s linear;
+  z-index: -1;
+}
+
+.col-btn:hover {
+  color: rgb(105, 105, 11);
+  background-color: transparent;
+  border: 1px solid rgb(117, 117, 2);
+}
+
+.col-btn:hover::before {
+  width: 100%;
+}
